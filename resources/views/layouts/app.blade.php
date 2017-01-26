@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel Quickstart - Intermediate</title>
+    <title>Stareup.com | One stop destination to Buy, Sell, Rent, Share resources that your dream startup may need.</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -16,6 +16,9 @@
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
+        a {
+          text-decoration: none;
+        }
         body {
             font-family: 'Lato';
         }
@@ -40,17 +43,32 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Task List
+                    <img alt="Stareup Inc." src="images/logoText.png" height="100%">
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-left" style="width: 65%;">
+
+                  <form class="navbar-form hidden-xs hidden-sm" role="search" style="float:right">
+                    <div class="input-group">
+                      <!--<a class="col-md-1 col-md-offset-1 label label-success">Furniture</a>
+                      <a class="col-md-1 col-md-offset-1 label label-danger">Office Space</a>
+                      <a class="col-md-1 col-md-offset-1 label label-warning">Resources</a>
+                      <a class="col-md-1 col-md-offset-1 label label-default">Coffee</a>
+                      <a class="col-md-1 col-md-offset-1 label label-info">Other</a>-->
+                      <input type="text" class="form-control" placeholder="Quick Search" size="50px">
+                      <span class="input-group-btn">
+                        <button class="btn btn-success" type="button">Search</button>
+                      </span>
+                    </div>
+                  </form>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url('/post') }}">Post now</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
