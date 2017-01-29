@@ -35,3 +35,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::auth();
 
 });
+
+// OAuth Routes
+Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');

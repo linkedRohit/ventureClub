@@ -35,4 +35,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'linkedIn' => [
+        'client_id' => env('LINKEDIN_ACCESS_KEY'),
+        'client_secret' => env('LINKEDIN_SECRET_KEY'),
+        'redirect' => 'http://localhost:8000/auth/linkedin/callback',
+    ],
 ];
